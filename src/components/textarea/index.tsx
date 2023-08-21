@@ -1,4 +1,4 @@
-import { TextareaHTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 import styled from "styled-components";
 
 const TextareaElement = styled.textarea<{ $disabled?: boolean }>`
@@ -12,9 +12,9 @@ const TextareaElement = styled.textarea<{ $disabled?: boolean }>`
   resize: none;
 `;
 
-interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {}
+interface Props extends ComponentPropsWithRef<"textarea"> {}
 
-export const Textarea: React.FC<TextareaProps> = (props) => {
+export const Textarea: React.FC<Props> = (props) => {
   return (
     <TextareaElement
       $disabled={props.disabled}

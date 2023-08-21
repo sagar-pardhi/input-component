@@ -66,7 +66,7 @@ function App() {
 
       <div className="input-container">
         <p>{"<Input multiline row={10} />"}</p>
-        <Input placeholder="Placeholder" multiline row={10} />
+        <Input placeholder="Placeholder" multiline rows={10} />
       </div>
     </div>
   );

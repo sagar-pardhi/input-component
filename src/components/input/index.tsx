@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 import styled from "styled-components";
 import { Textarea } from "../textarea";
 
@@ -65,18 +65,25 @@ const HelperText = styled.p<{ $error?: boolean }>`
   color: ${(props) => (props.$error ? "red" : "")};
 `;
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface CommonTypes {
   error?: boolean;
   helperText?: string;
   startIcon?: string;
   endIcon?: string;
   fullWidth?: boolean;
   variantSize?: "sm" | "md";
-  multiline?: boolean;
-  row?: number;
 }
 
-export const Input: React.FC<InputProps> = ({
+interface InputProps extends ComponentPropsWithRef<"input">, CommonTypes {
+  multiline?: false;
+}
+interface TextareaProps extends ComponentPropsWithRef<"textarea">, CommonTypes {
+  multiline?: true;
+}
+
+type Props = InputProps | TextareaProps;
+
+export const Input: React.FC<Props> = ({
   error,
   helperText,
   startIcon,
@@ -84,7 +91,6 @@ export const Input: React.FC<InputProps> = ({
   fullWidth,
   variantSize,
   multiline,
-  row,
   ...props
 }) => {
   return (
@@ -97,9 +103,9 @@ export const Input: React.FC<InputProps> = ({
       >
         {startIcon && <Icon src={startIcon} />}
         {multiline ? (
-          <Textarea rows={row} {...props} />
+          <Textarea {...(props as TextareaProps)} />
         ) : (
-          <InputElement $disabled={props.disabled} {...props} />
+          <InputElement $disabled={props.disabled} {...(props as InputProps)} />
         )}
         {endIcon && <Icon src={endIcon} />}
       </InputContainer>
