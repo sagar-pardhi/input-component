@@ -1,27 +1,85 @@
-# React + TypeScript + Vite
+<!-- Please update value in the {}  -->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center">Input Component</h1>
 
-Currently, two official plugins are available:
+<div align="center">
+   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div align="center">
+  <h3>
+    <a href="https://input-component-bvpbmf53r-sagar-pardhi.vercel.app/">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://github.com/sagar-pardhi/input-component">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-## Expanding the ESLint configuration
+<!-- TABLE OF CONTENTS -->
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Table of Contents
 
-- Configure the top-level `parserOptions` property like this:
+- [Overview](#overview)
+  - [Built With](#built-with)
+- [Features](#features)
+- [How to use](#how-to-use)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+<!-- OVERVIEW -->
+
+## Overview
+
+![screenshot](https://i.imgur.com/0V1Ma37.png)
+
+- Demo [here](https://input-component-bvpbmf53r-sagar-pardhi.vercel.app/)
+- Created an reusable input component to with different sizes, variations and validations.
+- Built this project using styled-components.
+
+### Built With
+
+<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
+
+- [React](https://reactjs.org/)
+- [Vite.js](https://vitejs.dev/)
+- [styled-components](https://styled-components.com/)
+
+## Features
+
+<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp) was to build an application to complete the given user stories.
+
+## How To Use
+
+<!-- Example:  -->
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/your-user-name/your-project-name
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Acknowledgements
+
+<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
+
+- [styled-components](https://styled-components.com/docs)
+
+## Contact
+
+- GitHub [@sagar-pardhi](https://{github.com/sagar-pardhi})
